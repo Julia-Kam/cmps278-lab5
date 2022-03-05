@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pizza Order Form</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="lab5.css" title="style" />
+  </head>
+  <body>
+    <h1 class="center">Pizza Order Form</h1>
+    <form id="form1">
+      <div class="roundcontainer">
+        <div class="sliderandtextcontainer">
+          <p>Size:</p>
+          <input type="range" id="slider" min="1" max="4" value="1" />
+          <p id="sizetext">Small 6$</p>
+        </div>
+        <img
+          src="pizzaimage.png"
+          alt="Cookie Monster: in cupcake form!"
+          class="center"
+          id="pizzaimage"
+          width="100px"
+        />
+      </div>
+
+      <fieldset>
+        <legend>Meat Toppings (+2$ for each)</legend>
+
+        <input type="checkbox" name="meat" id="pepperoni" value="Pepperoni" />
+        <label for="pepperoni"> Pepperoni</label><br />
+        <input type="checkbox" name="meat" id="sausage" value="Sausage" />
+        <label for="sausage">Sausage</label><br />
+        <input
+          type="checkbox"
+          name="meat"
+          id="groundbeef"
+          value="Ground Beef"
+        />
+        <label for="groundbeef">Ground Beef</label><br />
+        <input type="checkbox" name="meat" id="anchovy" value="Anchovy" />
+        <label for="anchovy">Anchovy</label><br />
+        <input type="checkbox" name="meat" id="chicken" value="Chicken" />
+        <label for="chicken">Chicken</label><br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Veggies (+1$ for each)</legend>
+
+        <input type="checkbox" name="veggies" id="tomatoes" value="Tomatoes" />
+        <label for="tomatoes">Tomatoes</label><br />
+        <input type="checkbox" name="veggies" id="onions" value="Onions" />
+        <label for="onions">Onions</label><br />
+        <input type="checkbox" name="veggies" id="olives" value="Olives" />
+        <label for="olives">Olives</label><br />
+        <input type="checkbox" name="veggies" id="mushrooms" value="Mushrooms" />
+        <label for="mushrooms">Mushrooms</label><br />
+        <input type="checkbox" name="veggies" id="pineapple" value="Pineapple" />
+        <label for="pineapple">Pineapple</label><br />
+        <input type="checkbox" name="veggies" id="spinach" value="Spinach" />
+        <label for="spinach">Spinach</label><br />
+        <input type="checkbox" name="veggies" id="jalapeno" value="Jalapeno" />
+        <label for="jalapeno">Jalapeno</label><br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Cheese</legend>
+
+        <input
+          type="radio"
+          id="regular"
+          name="cheeseoption"
+          value="regular cheese"
+        />
+        <label for="regular">Regular Cheese</label><br />
+        <input type="radio" id="none" name="cheeseoption" value="no cheese" />
+        <label for="none">No Cheese</label><br />
+        <input
+          type="radio"
+          id="extra"
+          name="cheeseoption"
+          value="extra cheese"
+        />
+        <label for="extra">Extra Cheese ($3)</label><br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Payment</legend>
+        <input type="radio" id="cash" name="paymentoption" value="cash" />
+        <label for="cash">Cash</label>
+        <input
+          type="radio"
+          id="mastercard"
+          name="paymentoption"
+          value="mastercard"
+        />
+        <label for="mastercard">MasterCard</label>
+        <input type="radio" id="visa" name="paymentoption" value="visa" />
+        <label for="visa">Visa</label>
+      </fieldset>
+
+      <input type="button" id="goto2" value="Next" class="button">
+    </form>
+
+    <form id="form2" style="display: none">
+      <div class="form2style">
+        <label for="firstname">First Name</label><br />
+        <input type="text" id="firstname" class="requiredField" /><br />
+        <label for="lastname">Last Name</label><br />
+        <input type="text" id="lastname" class="requiredField"/><br />
+        <label for="email">E-mail</label><br />
+        <input type="email" id="email" class="requiredField"/><br />
+        <label for="mobile">Phone Number</label><br />
+        <input type="text" id="mobile" class="requiredField"/>
+        <label for="city">City</label><br />
+        <select id="city" class="requiredField">
+          <option value="">-- Please choose an option --</option>
+          <option value="Beirut">Beirut</option>
+          <option value="newyork">New York</option>
+          <option value="chicago">Chicago</option>
+          <option value="tripoli">Tripoli</option></select
+        ><br />
+        <label for="address">Address</label><br />
+        <textarea id="address" rows="4" class="requiredField"></textarea>
+      </div>
+      <input type="button" id="backto1" value="Back" class="button">
+      <input type="button" id="goto3" value="Next" class="button">
+    </form>
+
+
+    <div id="OrderSummary" style="display: none">
+      <h1>Order Summary</h1>
+      <h2>Deliver to</h2>
+      <p id="dlvrTo"></p>
+      <h2>Order</h2>
+      <ul id="orderList"></ul>
+      <h2 id="total">Total</h2>
+      <input type="button" id="backto2" value="Back" class="button">
+    </div>
+    
+  </body>
+
+  <script src="lab5.js"></script>
+  
+</html>

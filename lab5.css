@@ -1,0 +1,74 @@
+.roundcontainer {
+  border: solid 1px gray;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.sliderandtextcontainer {
+  display: flex;
+  flex-direction: row;
+}
+
+fieldset {
+  border: solid 1px gray;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+body {
+  background-color: cyan;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+}
+
+form {
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+.form2style input {
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+#city {
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 30;
+  margin-bottom: 10px;
+}
+
+.form2style textarea {
+  width: 100%;
+  border-radius: 5px;
+  padding: 5px;
+  border: none;
+}
+
+#OrderSummary{
+  width: 50vw;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  background-color: #ffffff;
+}
+
+.button {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
