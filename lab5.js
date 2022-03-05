@@ -100,23 +100,23 @@ const fillSummary = () => {
   const orderList = document.getElementById('orderList');
   orderList.innerHTML = ""
   var li = document.createElement("li");
-  li.appendChild(document.createTextNode(pizzaSize + ' size'))
+  li.appendChild(document.createTextNode('- ' + pizzaSize + ' size'))
   orderList.append(li);
 
-  const selectedItems = getMeet().concat(getVeg());
+  var selectedItems = [];
+  selectedItems = selectedItems.concat(getMeet())
+  selectedItems = selectedItems.concat(getVeg());
   const cheeseoptions = document.getElementsByName("cheeseoption");
   for (var topping of cheeseoptions){
     if (topping.checked){
       selectedItems.push(topping);
     }
   }
-  const paymentoptions = document.getElementsByName("paymentoption");
-  for (var options of paymentoptions){
-    if (options.checked){
-      selectedItems.push(options);
-    }
-  }
+
+  console.log(selectedItems);
   selectedItems.sort((a, b)=> (a.value > b.value)? 1 : -1);
+  console.log(selectedItems);
+
   for(var item of selectedItems){
     var li = document.createElement("li");
     li.appendChild(document.createTextNode(item.value));
